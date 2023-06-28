@@ -11,9 +11,10 @@ ray.init(runtime_env={'env_vars': {'__MODIN_AUTOIMPORT_PANDAS__': '1'}},
          include_dashboard=False)
 
 # %% simulate a data frame with 3 columns: x1, x2, y.
-x1 = np.random.randn(100)
-x2 = np.random.randn(100)
-y = 2*x1 + 3*x2 + 4 + np.random.normal(0,4,100)
+np.random.seed(123)
+x1 = np.random.randn(65000)
+x2 = np.random.randn(65000)
+y = 2*x1 + 3*x2 + 4 + np.random.normal(0,4,65000)
 
 my_df = pd.DataFrame({'x1': x1, 'x2': x2, 'y': y})
 
