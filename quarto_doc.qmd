@@ -1,0 +1,19 @@
+---
+title: "My First Python Quarto Doc"
+format: html
+---
+
+# Ni Haoo
+
+$y = \beta_0 + \beta_1 x_1$
+
+```{python}
+import pandas as pd
+
+df = pd.DataFrame({'x1': [2,3,4],
+        'x2': [1, 2, 3]
+        })
+
+print(df)
+
+```
